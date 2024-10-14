@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body{
+  background-color: #1e1e2f;
+  color: #fff;
+}
+/*@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");*/
+/*.dark*/
+/*{*/
+/*  background-color: #1e1e2f;*/
+/*  color: #f2f2f2*/
+/*}*/
+/*.light*/
+/*{*/
+/*  background-color: #fff;*/
+/*}*/
+* {box-sizing: border-box;}
+/*body {*/
+/*  background: #1e1e2f; !* Тъмен фон *!*/
+/*  color: #f2f2f2; !* Светъл текст *!*/
+/*  transition: background 0.2s linear;*/
+/*}*/
+
+.App {
+  text-align: center;
+  max-width: 900px;
+  margin-top: 20px;
+  margin-bottom: 200px;
+  padding: 80px;
+  background-color: #2a2b3d; /* Мек тъмен фон за приложенията */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navbar {
+  padding: 15px;
+  text-align: center;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #2f2f47; /* По-светъл фон за навигацията */
+}
+
+.navbar a {
+  text-decoration: none;
+  margin-inline: 5px;
+  color: #007bff; /* Акцентен цвят - розово-коралов */
+  font-weight: bold;
+}
+h2{
+  margin-top: 30px;
+}
+/* Стил за бутон */
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Стил за списъка с книги */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #282c34;
+  border: 1px solid #282c34;
+  border-radius: 4px;
+}
+
+
+
+/*//light/dark button*/
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+
+}
+
+.checkbox-label {
+  background-color: #111;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*.fa-moon {color: #f1c40f;}*/
+
+/*.fa-sun {color: #f39c12;}*/
+
+.checkbox-label .ball {
+  background-color: #2a2b3d;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+
+
+
+/*footer*/
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+  margin-inline: 5px;
+  border-radius: 8px;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #007bff;
+  margin: 0 10px;
+  display: flex;
+  padding: 5px 5px;
+  transition: 0.5s;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
